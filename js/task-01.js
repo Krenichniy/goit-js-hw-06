@@ -6,22 +6,13 @@ const getAmountCategoriesEl = () => {
   console.log("Number of categories:", listItemsArray.length);
 
   listItemsArray.map((item) => {
-    // item = document.querySelector("");
-    // console.log(item);
-    const header = item.firstChild;
-    console.log(header);
+    const header = item.firstElementChild;
+    const listEl = item.lastElementChild;
+    const listItemsAmount = listEl.children;
+
     console.log("Category:", header.textContent);
+    console.log("Elements:", listItemsAmount.length);
   });
 };
 
 getAmountCategoriesEl();
-
-//   item.map((element) => {
-//     console.log("Category:", element.textContent);
-//   });
-
-//   const itemList = [...document.querySelectorAll("ul")];
-//   itemList.map((element) => {
-//     const elementsList = [...element.children];
-//     console.log("Elements:", elementsList.length);
-//   });
