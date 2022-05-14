@@ -1,4 +1,4 @@
-const categoriesEl = document.querySelector("#categories");
+// const categoriesEl = document.querySelector("#categories");
 
 const getAmountCategoriesEl = () => {
   const listItemsArray = [...document.querySelectorAll(".item")];

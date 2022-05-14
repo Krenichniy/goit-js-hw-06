@@ -1,23 +1,17 @@
 let counterValue = 0;
 
-const decrementBtnEl = document.querySelector(
-  "button[data-action = 'decrement']"
-);
+const refs = {
+  decrementBtnEl: document.querySelector("button[data-action = 'decrement']"),
+  incrementBtnEl: document.querySelector("button[data-action = 'increment']"),
+  currentValue: document.querySelector("#value"),
+};
 
-console.log(decrementBtnEl.dataset.action);
-
-const incrementBtnEl = document.querySelector(
-  "button[data-action = 'increment']"
-);
-console.log(incrementBtnEl.dataset.action);
-
-decrementBtnEl.addEventListener("click", () => {
-  console.log("Button was clicked decr");
+refs.decrementBtnEl.addEventListener("click", () => {
   counterValue -= 1;
+  refs.currentValue.textContent = `${counterValue}`;
 });
 
-incrementBtnEl.addEventListener("click", () => {
+refs.incrementBtnEl.addEventListener("click", () => {
   counterValue += 1;
-  console.log("Button was clicked incr");
+  refs.currentValue.textContent = `${counterValue}`;
 });
-console.log(counterValue);
