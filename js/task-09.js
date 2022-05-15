@@ -11,5 +11,6 @@ refs.colorSwitcher.addEventListener("click", changeColor);
 
 function changeColor(event) {
   document.body.style.backgroundColor = `${getRandomHexColor()}`;
-  refs.currentColor.textContent = `${getRandomHexColor()}`;
+
+  refs.currentColor.textContent = document.body.style.backgroundColor;
 }
